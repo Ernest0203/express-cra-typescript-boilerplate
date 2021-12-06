@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/runserver.js",
+    "dev": "cross-env NODE_ENV=development nodemon -r esm src/runserver.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "config": "^3.0.1",
+    "cross-env": "^6.0.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.17",
+    "nodemon": "^1.18.10",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
+  }
+}

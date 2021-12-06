@@ -1,0 +1,24 @@
+{
+  "name": "express-cra",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "server-install": "(cd ./server && npm install)",
+    "client-install": "(cd ./client && npm install)",
+    "install-all": "(npm install && concurrently \"npm run server-install\" \"npm run client-install\")",
+    "server": "npm run dev --prefix server",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+    "start": "npm run start --prefix server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix server && npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
