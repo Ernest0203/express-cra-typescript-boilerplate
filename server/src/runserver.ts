@@ -1,9 +1,9 @@
-const config = require('config');
-const mongoose = require('mongoose');
-const server = require('./server');
+import config from 'config';
+import mongoose from 'mongoose';
+import server from './server';
 
-const gracefulShutdownTime = 15000;
-let ONLINE = true;
+const gracefulShutdownTime: number = 15000;
+let ONLINE: boolean = true;
 
 const mongoUri = config.get('db.mongo.uri');
 mongoose.connect(mongoUri, {useNewUrlParser: true,  useUnifiedTopology: true})
